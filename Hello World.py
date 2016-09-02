@@ -20,7 +20,7 @@ python -m pip install matplotlib
 """
 
 """
-Operadores y prioridades
+Operadores
 
 int si ambos son int, float si alguno es float
 + - *
@@ -30,4 +30,11 @@ float
 
 int
 // %
+
+Prioridades
+**
+*
+/
++ -
+ejecutado de izq a derecha
 """
