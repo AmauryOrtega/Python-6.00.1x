@@ -18,3 +18,16 @@ python -m pip install --upgrade pip
 python -m pip install numpy
 python -m pip install matplotlib
 """
+
+"""
+Operadores y prioridades
+
+int si ambos son int, float si alguno es float
++ - *
+
+float
+/ **
+
+int
+// %
+"""
