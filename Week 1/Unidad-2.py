@@ -62,3 +62,33 @@ texto = input("Ingrese algo: ")
 numero = int(input("Ingrese numero: "))
 
 cls()
+# Forma tradicional
+n = 0
+while n < 5:
+    print(n)
+    n += 1
+
+# Reemplaza al <
+n = 0
+for n in range(5):
+    print(n)
+
+# Limites inf y sup
+n = 0
+for i in range(7, 10):
+    n += i
+print(n)
+
+# Incrementos
+n = 0
+for i in range(5, 11, 2):
+    n += i
+print(n)
+
+# Salir de loop
+n = 0
+for i in range(5, 11, 2):
+    n += i
+    if n == 5:
+        break
+print(n)
