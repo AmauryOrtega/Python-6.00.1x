@@ -92,3 +92,14 @@ for i in range(5, 11, 2):
     if n == 5:
         break
 print(n)
+
+cls()
+
+# X^2
+x = 3
+answer = 0
+pasos = x
+while pasos != 0:
+    answer += x
+    pasos -= 1
+print(str(x) + "*" + str(x) + " = " + str(answer))
