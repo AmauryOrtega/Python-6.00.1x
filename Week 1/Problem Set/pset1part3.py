@@ -43,6 +43,6 @@ for i in range(len(s) - 1):
     else:
         current = s[i + 1]
 
-    i += 1
+    i += 1  # Linea de mas
 
 print('Longest substring in alphabetical order is: ' + longest)
