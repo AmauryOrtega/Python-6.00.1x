@@ -103,3 +103,45 @@ while pasos != 0:
     answer += x
     pasos -= 1
 print(str(x) + "*" + str(x) + " = " + str(answer))
+
+# Guess and check method
+# Raiz cubica
+x = int(input("Ingrese un entero: "))
+answer = 0
+while answer ** 3 < x:
+    answer += 1
+if answer ** 3 != x:
+    print(str(x) + " no es un cubo perfecto")
+else:
+    print("Raiz cubica de " + str(x) + " es " + str(answer))
+
+# Raiz cubica con signo
+x = int(input("Ingrese un entero: "))
+answer = 0
+while answer ** 3 < abs(x):
+    answer += 1
+if answer ** 3 != abs(x):
+    print(str(x) + " no es un cubo perfecto")
+else:
+    if x < 0:
+        answer = - answer
+    print("Raiz cubica de " + str(x) + " es " + str(answer))
+
+# Guess and check con for
+cube = 8
+for guess in range(cube + 1):
+    if guess ** 3 == cube:
+        print("Raiz cubica de", cube, "is", guess)
+
+# Mejora
+cube = 8
+guess = 0
+for guess in range(abs(cube + 1)):
+    if guess ** 3 >= abs(cube):
+        break
+if guess ** 3 != abs(cube):
+    print(cube, "is not a perfect cube")
+else:
+    if cube < 0:
+        guess = -guess
+    print("Raiz cubica de", cube, "is", guess)
