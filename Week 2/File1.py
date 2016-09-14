@@ -57,3 +57,60 @@ if abs(guess ** 3 - cube) >= epsilon and guess <= cube:
     print('Failed on cube root of', cube)
 else:
     print(guess, 'is close to the cube root of', cube)
+
+# Square Root using bisection search
+x = 25
+epsilon = 0.01
+num_guesses = 0
+low = 0.0
+high = x
+ans = (high + low)/2.0
+
+while abs(ans**2 - x) >= epsilon:
+    print('low = '+ str(low) + ' high = ' + str(high) + ' ans = ' + str(ans))
+    num_guesses += 1
+    if ans**2 < x:
+        low = ans
+    else:
+        high = ans
+    ans = (high + low)/2.0
+print('num_guesses = ' + str(num_guesses))
+print(str(ans) + ' is close to square root of ' + str(x))
+
+# Cube Root using bisection search
+cube = 125
+epsilon = 0.01
+num_guesses = 0
+low = 0.0
+high = cube
+ans = (high + low)/2.0
+
+while abs(ans**3 - cube) >= epsilon:
+    print('low = '+ str(low) + ' high = ' + str(high) + ' ans = ' + str(ans))
+    num_guesses += 1
+    if ans**3 < cube:
+        low = ans
+    else:
+        high = ans
+    ans = (high + low)/2.0
+print('num_guesses = ' + str(num_guesses))
+print(str(ans) + ' is close to cube root of ' + str(cube))
+
+# Guessing secret number using bisection search
+high = 100
+low = 0
+text = ' '
+print('Please think of a number between ' + str(low) + ' and ' + str(high) + '!')
+while text!='c':
+    ans = (high + low)//2
+    print('Is your secret number',str(ans),'?')
+    text = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+    if text=='h':
+        high = ans
+    elif text=='l':
+        low = ans
+    elif text=='c':
+        print('Game over. Your secret number was:',str(ans))
+    else:
+        print("Please Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+        continue
