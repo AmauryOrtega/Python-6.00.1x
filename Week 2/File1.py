@@ -153,3 +153,21 @@ for i in range(p-len(result)):
 
 result = result[0:-p] + '.' + result[-p:]
 print('The binary representation of the decimal '+ str(x) + ' is ' + result)
+
+# Square root using Newton-Raphson
+'''
+For any polynomial in one variable
+wanted to find r such f(r)=0
+g is an aproximate root of f if
+g-f(g)/f'(g)
+'''
+epsilon = 0.01
+y = 24.0
+guess = y/2.0
+num_guesses = 0
+
+while abs(guess**2-y) >= epsilon:
+    num_guesses += 1
+    guess = guess - (((guess**2)+y)/(2*guess))
+print('num_guesses = ' + str(num_guesses))
+print('Square root of ' + str(y) + ' is about ' + str(guess))
