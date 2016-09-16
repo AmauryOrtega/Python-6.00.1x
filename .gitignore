@@ -39,3 +39,4 @@ Thumbs.db
 # PyCharm workspace.xml #
 #########################
 workspace.xml
+./.idea/*.*
