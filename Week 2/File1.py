@@ -168,6 +168,6 @@ num_guesses = 0
 
 while abs(guess**2-y) >= epsilon:
     num_guesses += 1
-    guess = guess - (((guess**2)+y)/(2*guess))
+    guess -= ((guess ** 2) - y) / (2 * guess)
 print('num_guesses = ' + str(num_guesses))
 print('Square root of ' + str(y) + ' is about ' + str(guess))
