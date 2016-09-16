@@ -39,4 +39,5 @@ Thumbs.db
 # PyCharm workspace.xml #
 #########################
 workspace.xml
-./.idea/*.*
+.idea/misc.xml
+.idea/Python-6.00.1x.iml
