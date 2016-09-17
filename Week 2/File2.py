@@ -5,6 +5,7 @@ Created on 16/09/2016
 @author: Amaury Ortega <amauryocortega@gmail.com>
 """
 
+
 # Basic function
 def is_even(i):
     """
@@ -14,17 +15,24 @@ def is_even(i):
     print("Hi")
     return i % 2 == 0
 
+
 # function returned in a function
 def func_a():
     print('inside func_a')
+
+
 def func_b(y):
     print('inside func_b')
     return y
+
+
 def func_c(z):
     print('inside func_c')
     return z()
+
+
 print(func_a())
-print(5+func_b(2))
+print(5 + func_b(2))
 print(func_c(func_a))
 ######################
 """
@@ -42,14 +50,18 @@ x = 5
 g(x)
 print(x)
 """
-#function inside function
+
+
+# function inside function
 def g(x):
     def h():
         x = 'abc'
+
     x = x + 1
-    print('in g(x): x =',x)
+    print('in g(x): x =', x)
     h()
     return x
+
 
 x = 3
 z = g(x)
