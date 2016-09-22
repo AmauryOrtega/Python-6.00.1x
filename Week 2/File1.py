@@ -63,16 +63,16 @@ epsilon = 0.01
 num_guesses = 0
 low = 0.0
 high = x
-ans = (high + low)/2.0
+ans = (high + low) / 2.0
 
-while abs(ans**2 - x) >= epsilon:
-    print('low = '+ str(low) + ' high = ' + str(high) + ' ans = ' + str(ans))
+while abs(ans ** 2 - x) >= epsilon:
+    print('low = ' + str(low) + ' high = ' + str(high) + ' ans = ' + str(ans))
     num_guesses += 1
-    if ans**2 < x:
+    if ans ** 2 < x:
         low = ans
     else:
         high = ans
-    ans = (high + low)/2.0
+    ans = (high + low) / 2.0
 print('num_guesses = ' + str(num_guesses))
 print(str(ans) + ' is close to square root of ' + str(x))
 
@@ -82,16 +82,16 @@ epsilon = 0.01
 num_guesses = 0
 low = 0.0
 high = cube
-ans = (high + low)/2.0
+ans = (high + low) / 2.0
 
-while abs(ans**3 - cube) >= epsilon:
-    print('low = '+ str(low) + ' high = ' + str(high) + ' ans = ' + str(ans))
+while abs(ans ** 3 - cube) >= epsilon:
+    print('low = ' + str(low) + ' high = ' + str(high) + ' ans = ' + str(ans))
     num_guesses += 1
-    if ans**3 < cube:
+    if ans ** 3 < cube:
         low = ans
     else:
         high = ans
-    ans = (high + low)/2.0
+    ans = (high + low) / 2.0
 print('num_guesses = ' + str(num_guesses))
 print(str(ans) + ' is close to cube root of ' + str(cube))
 
@@ -100,18 +100,20 @@ high = 100
 low = 0
 text = ' '
 print('Please think of a number between ' + str(low) + ' and ' + str(high) + '!')
-while text!='c':
-    ans = (high + low)//2
-    print('Is your secret number',str(ans),'?')
-    text = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
-    if text=='h':
+while text != 'c':
+    ans = (high + low) // 2
+    print('Is your secret number', str(ans), '?')
+    text = input(
+        "Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+    if text == 'h':
         high = ans
-    elif text=='l':
+    elif text == 'l':
         low = ans
-    elif text=='c':
-        print('Game over. Your secret number was:',str(ans))
+    elif text == 'c':
+        print('Game over. Your secret number was:', str(ans))
     else:
-        print("Please Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+        print(
+            "Please Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
         continue
 
 # Dec to bin
@@ -125,8 +127,8 @@ result = ''
 if num == 0:
     result = '0'
 while num > 0:
-    result = str(num%2) + result
-    num = num//2
+    result = str(num % 2) + result
+    num = num // 2
 if isNeg:
     result = '-' + result
 print('bin: ' + str(result))
@@ -135,24 +137,24 @@ print('bin: ' + str(result))
 x = float(input('Enter a decimal number between 0 and 1: '))
 
 p = 0
-while ((2**p)*x)%1 != 0:
-    print('Remainder = '+str((2**p)*x - int((2**p)*x)))
+while ((2 ** p) * x) % 1 != 0:
+    print('Remainder = ' + str((2 ** p) * x - int((2 ** p) * x)))
     p += 1
 
-num = int(x*(2**p))
+num = int(x * (2 ** p))
 
 result = ''
 if num == 0:
     result = '0'
 while num > 0:
-    result = str(num%2) + result
-    num = num//2
+    result = str(num % 2) + result
+    num = num // 2
 
-for i in range(p-len(result)):
+for i in range(p - len(result)):
     result = '0' + result
 
 result = result[0:-p] + '.' + result[-p:]
-print('The binary representation of the decimal '+ str(x) + ' is ' + result)
+print('The binary representation of the decimal ' + str(x) + ' is ' + result)
 
 # Square root using Newton-Raphson
 '''
@@ -163,10 +165,10 @@ g-f(g)/f'(g)
 '''
 epsilon = 0.01
 y = 24.0
-guess = y/2.0
+guess = y / 2.0
 num_guesses = 0
 
-while abs(guess**2-y) >= epsilon:
+while abs(guess ** 2 - y) >= epsilon:
     num_guesses += 1
     guess -= ((guess ** 2) - y) / (2 * guess)
 print('num_guesses = ' + str(num_guesses))
