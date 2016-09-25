@@ -32,3 +32,45 @@ cool = ['grey', 'green', 'blue']
 sortedcool = sorted(cool)
 print('cool:', cool)
 print('sortedcool:', sortedcool)
+
+# Nested lists
+warm = ['yellow', 'orange']
+hot = ['red']
+brightcolors = [warm]
+print('brightcolors:', brightcolors)
+brightcolors.append(hot)
+print('brightcolors:', brightcolors)
+hot.append('pink')
+print('brightcolors:', brightcolors)
+
+print(hot + warm)
+
+
+# Iterations over mutated lists is wrong
+def remove_dups(L1, L2):
+    '''
+    :param L1: list
+    :param L2: list
+    '''
+    for e in L1:
+        if e in L2:
+            L1.remove(e)
+
+
+'''
+L1 = [1, 2, 3, 4]
+L2 = [1, 2, 5, 6]
+remove_dups(L1, L2)
+'''
+
+
+# Iterations over copied lists
+def remove_dups(L1, L2):
+    '''
+    :param L1: list
+    :param L2: list
+    '''
+    L1_copy = L1[:]
+    for e in L1_copy:
+        if e in L2:
+            L1.remove(e)
