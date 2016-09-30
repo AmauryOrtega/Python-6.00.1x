@@ -31,4 +31,12 @@ Testing:
         unit testing
         regression testing = check previous bugs in the same function
         integration testing = whole program
+
+Runtime bugs:
+Overt vs covert
+    Overt = crashes or infinite loop
+    Covert = returns incorrect value
+Persistent vs intermittent:
+    Persistent = occurs every time
+    Intermittent = only some times, even with same input
 '''
