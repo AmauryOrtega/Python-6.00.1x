@@ -81,16 +81,26 @@ print('Correct input of an integer')
 
 # Handle files
 data = []
-file_name = input('Provide a file name for data')
+file_name = input('Provide a file name for data ')
 
 try:
     file_handler = open(file_name, 'r')
 except IOError:
     print('Cannot open', file_name)
 else:
-    for new in fh:
+    for new in file_handler:
         if new != '\n':
             addIt = new[:-1].split(',')  # Remove tailing \n
             data.append(addIt)
 finally:
     file_handler.close()
+
+gradesData = []
+if data:
+    for student in data:
+        try:
+            name = student[0:-1]
+            grades = int(student[-1])
+            gradesData.append([name], [grades])
+        except ValueError:
+            gradesData.append([student[:]], [])
