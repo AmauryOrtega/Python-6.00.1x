@@ -8,9 +8,9 @@ Created on 08/10/2016
 
 # Every class inherits from object
 class Coordinate(object):
-    # Attributes can be here
+    # Class Attributes here
     def __init__(self, x, y):
-        # Or here with the constructor
+        # Instance Attributes here
         self.x = x
         self.y = y
 
