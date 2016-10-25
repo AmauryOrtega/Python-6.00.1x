@@ -89,16 +89,67 @@ def fact_recur(n):
         return n * fact_recur(n - 1)
 
 
+def isSubset(l1, l2):
+    """
+    O(n^C)    polynomial
+
+    O(len(l1)*len(l2)) with the worst case when they're the same length
+    O(n^2)
+    """
+    for e1 in l1:
+        matched = False
+        for e2 in l2:
+            if e1 is e2:
+                matched = True
+                break
+        if not matched:
+            return False
+    return True
+
+
+def intersect(l1, l2):
+    """
+    :param l1: list
+    :param l2: list
+    :return: a list with each element appearing only once
+    O(len(l1)*len(l2)) -> worst case when they're the same length
+    O(n^2), the second loop gets overwhelm by the first one
+    """
+
+    tmp = []
+    # len(l1)*len(l2)
+    for e1 in l1:
+        for e2 in l2:
+            if e1 == e2:
+                tmp.append(e1)
+    res = []
+    # len(l1)
+    for e in tmp:
+        if not (e in res):
+            res.append(e)
+    return res
+
+
+def g(n):
+    """ :param n: integer >= 0 """
+    # O(n^2)
+    x = 0
+    for i in range(n):
+        for j in range(n):
+            x += 1
+    return x
+
+
+"""
+O(C^n)      exponential
+"""
+
 """
 O(n log n)  log lineal
 """
 
-"""
-O(n^C)      polynomial
-O(C^n)      exponential
-"""
 
-
+# LAWS
 def test(n):
     #  Law of addition for O(), Only the strongest survive
     # O(n) + O(n*n) = O(n+n*n) = O(n*n) = O(n^2)
