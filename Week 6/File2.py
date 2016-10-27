@@ -41,7 +41,7 @@ independent of the input
 
 def intToStr(i):
     """
-    O(log n)    logarithm
+    O(log n)    logarithm -> parts the problem in a portion, usually 2
     bisection search
     binary search of a list
     """
@@ -140,9 +140,26 @@ def g(n):
     return x
 
 
-"""
-O(C^n)      exponential
-"""
+def genSubsets(l):
+    """
+    O(C^n)      exponential
+    all combinations of a list
+    """
+    """
+    O(2^2)
+    time includes time to solve smaller problem, plus time needed to make a copy of all elements
+    in smaller problem
+    """
+    res = []
+    if len(l) == 0:
+        return [[]]  # List of empty list
+    smaller = genSubsets(l[:-1])  # All subsets without the last element
+    extra = l[-1:]  # A list with just the last element
+    new = []
+    for small in smaller:
+        new.append(small + extra)  # for all smaller solutions, add one with last element
+    return smaller + new  # Combine those with last element and those without
+
 
 """
 O(n log n)  log lineal

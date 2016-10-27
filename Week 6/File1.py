@@ -68,9 +68,9 @@ def search_for_element(l, e):
 """
 Types of orders of growth
 Constant
-linear
-quadratic
 logarithmic
+linear
 n log n
+quadratic
 exponential
 """
