@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Python-6.00.1x.iml" filepath="$PROJECT_DIR$/.idea/Python-6.00.1x.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Python-6.00.2x/.idea/Python-6.00.2x.iml" filepath="$PROJECT_DIR$/../Python-6.00.2x/.idea/Python-6.00.2x.iml" />
     </modules>
   </component>
 </project>
